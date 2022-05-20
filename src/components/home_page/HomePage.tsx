@@ -1,9 +1,11 @@
+import { Footer } from "../footer/Footer"
 import { Header } from "../header/Header"
+import { Shop } from "./shop/Shop"
 
 export default function HomePage() {
     return <div className="page">
         <Header />
-        <h1>Shop</h1>
-        <h1>Footer</h1>
+        <Shop />
+        <Footer />
     </div>
 }
