@@ -1,13 +1,13 @@
+import { Link } from "react-router-dom"
 import "./header.css"
 
 export function Header() {
     return <header>
         <div className="header">
-            <h1>Logo</h1>
+            <Link to="/"><h1>Logo</h1></Link>
             <ul>
-                <li>Sign In/Sign Up</li>
                 <li>Cart</li>
-                <li>About</li>
+                <li><Link to="/about">About</Link></li>
             </ul>
         </div>
     </header>
