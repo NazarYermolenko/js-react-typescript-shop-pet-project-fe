@@ -11,7 +11,6 @@ function App() {
       <Route path='*' element={<NotFoundPage />} />
       <Route path='/about' element={<AboutPage />} />
     </Routes>
-
   );
 }
 
