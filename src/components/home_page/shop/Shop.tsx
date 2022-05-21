@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { getNbuData } from "../../../common/currencies/getNbuData"
 import { IShopItem } from "./shopItem/IShopItem"
 import { ShopItem } from "./shopItem/ShopItem"
-
+import "./shop.css"
 
 export function Shop() {
     const [isPriceLoading, setIsPriceLoaded] = useState(false)
@@ -21,20 +21,22 @@ export function Shop() {
         getNbuData().then(data => {
             const usdData = data.find((currency) => currency.cc === "USD")
             setUsdUahPrice(usdData.rate)
-            setIsPriceLoaded(true)
+            setIsPriceLoaded(true
+            )
         })
 
     })
 
-    return <div className="deck">
-
-        {shopItems.map((item) => {
-            return <ShopItem
-                key={item.id}
-                item={item}
-                usdUAHprice={usdUAHprice}
-                isPriceLoading={isPriceLoading}
-            ></ShopItem>
-        })}
+    return <div className="container">
+        <div className="shop-section">
+            {shopItems.map((item) => {
+                return <ShopItem
+                    key={item.id}
+                    item={item}
+                    usdUAHprice={usdUAHprice}
+                    isPriceLoading={isPriceLoading}
+                ></ShopItem>
+            })}
+        </div>
     </div>
 }

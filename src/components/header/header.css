@@ -1,0 +1,22 @@
+.header {
+    margin: auto;
+    width: 90%;
+    padding: 1em 0 1em 0;
+}
+
+.header>.container {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    margin-left: auto;
+}
+
+.menu>ul {
+    display: flex;
+}
+
+.menu_item {
+    margin-left: 3em;
+}

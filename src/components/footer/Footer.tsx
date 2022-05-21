@@ -1,5 +1,9 @@
+import "./footer.css"
+
 export function Footer() {
-    return <div className="footer">
-        Created by Nazar Yermolenko
-    </div>
+    return <footer className="footer" id="footer">
+        <div className="container">
+            Created by Nazar Yermolenko
+        </div>
+    </footer>
 }
