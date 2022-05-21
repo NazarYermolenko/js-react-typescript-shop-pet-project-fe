@@ -21,16 +21,23 @@ export function Shop() {
         getNbuData().then(data => {
             const usdData = data.find((currency) => currency.cc === "USD")
             setUsdUahPrice(usdData.rate)
-            setIsPriceLoaded(true
-            )
+            setIsPriceLoaded(true)
         })
-
     })
+
+    function handleDelete(item: IShopItem) {
+        const shopItemsWithoutDeletedOne = shopItems.filter((shopItem) => {
+            console.log(item.id, shopItem.id)
+            return shopItem.id !== item.id
+        })
+        setShopItems(shopItemsWithoutDeletedOne)
+    }
 
     return <div className="container">
         <div className="shop-section">
             {shopItems.map((item) => {
                 return <ShopItem
+                    deleteItemHandler={handleDelete.bind(this)}
                     key={item.id}
                     item={item}
                     usdUAHprice={usdUAHprice}

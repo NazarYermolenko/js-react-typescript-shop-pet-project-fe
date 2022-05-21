@@ -1,6 +1,7 @@
+import { Button } from "../../../common/button/Button";
 import { IShopItem } from "./IShopItem";
 
-export function ShopItem(props: { item: IShopItem, usdUAHprice: number, isPriceLoading: boolean }) {
+export function ShopItem(props: { item: IShopItem, usdUAHprice: number, isPriceLoading: boolean, deleteItemHandler: () => {} }) {
     const priceUah = props.item.priceUAH || (props.item.priceUSD * props.usdUAHprice).toFixed(2)
 
     return <div className="shop_item">
@@ -17,5 +18,6 @@ export function ShopItem(props: { item: IShopItem, usdUAHprice: number, isPriceL
                 <div>UAH:{props.item.priceUAH || priceUah} Hryvnas</div>
             }
         </div>
+        <Button onClick={props.deleteItemHandler.bind(this, props.item)}>Delete</Button>
     </div >
 }
