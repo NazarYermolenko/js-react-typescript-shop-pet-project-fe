@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding: 1em;
+}
+
+.header_container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    padding-left: 20px;
+}
+
+.menu {
+    display: flex;
+    margin-left: auto;
+    padding-left: 40px;
+}
+
+.menu_item {
+    padding-left: 20px;
+}
