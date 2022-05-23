@@ -1,8 +1,6 @@
 
 export function Footer() {
-    return <footer className="footer" id="footer">
-        <div className="container">
-            Created by Nazar Yermolenko
-        </div>
+    return <footer className="container footer_container" id="footer">
+        Created by Nazar Yermolenko
     </footer>
 }

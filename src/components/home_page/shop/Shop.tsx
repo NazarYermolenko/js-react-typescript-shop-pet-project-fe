@@ -17,8 +17,8 @@ export function Shop() {
     })
 
     return <div className="container">
-        <div className="shop-section">
-            {items.map((item) => {
+        <div className="shop_section">
+            {!(items.length > 0) ? <p>No items available</p> : items.map((item) => {
                 return <ShopItem
                     key={item.id}
                     item={item}

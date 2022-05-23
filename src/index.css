@@ -5,6 +5,11 @@
     padding: 1em;
 }
 
+.about_container,
+.footer_container {
+    justify-content: center;
+}
+
 .header_container {
     display: flex;
     align-items: center;
@@ -22,4 +27,45 @@
 
 .menu_item {
     padding-left: 20px;
+}
+
+.shop_section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.shop_item {
+    margin: 10px;
+    padding: 10px;
+    border: solid 1px;
+    box-shadow: -2px 1px 6px 1px;
+}
+
+.login_form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.title {
+    padding: 10px;
+    margin: auto;
+}
+
+.button_section {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    margin: auto;
+}
+
+.login_input_container {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
