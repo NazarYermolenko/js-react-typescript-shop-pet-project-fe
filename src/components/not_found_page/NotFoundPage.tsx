@@ -1,5 +1,5 @@
-import { Footer } from "../footer/Footer";
-import { Header } from "../header/Header";
+import { Footer } from "../common_components/footer/Footer";
+import { Header } from "../common_components/header/Header";
 
 export function NotFoundPage() {
     return <div>
