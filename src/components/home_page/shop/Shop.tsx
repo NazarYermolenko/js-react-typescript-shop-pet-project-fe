@@ -21,11 +21,11 @@ export function Shop() {
         <div className="shop-section">
             {items.map((item) => {
                 return <ShopItem
-                    deleteHandler={deleteItem}
                     key={item.id}
                     item={item}
                     usdUAHprice={usdUAHprice}
                     isPriceLoading={isPriceLoading}
+                    deleteHandler={deleteItem}
                 ></ShopItem>
             })}
         </div>
