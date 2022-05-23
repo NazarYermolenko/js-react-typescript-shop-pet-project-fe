@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from "react"
 import { getNbuData } from "../../../common/currencies/getNbuData"
 import { ShopItem } from "./shopItem/ShopItem"
-import "./shop.css"
 import { ShopContext } from "../../../common/context/ShopContext"
 
 export function Shop() {
