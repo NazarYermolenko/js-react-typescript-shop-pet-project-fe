@@ -1,4 +1,4 @@
-import { Button } from "../../../common/button/Button";
+import { Button } from "../../../common_components/button/Button";
 import { IShopItem } from "./IShopItem";
 
 export function ShopItem(props: { item: IShopItem, usdUAHprice: number, isPriceLoading: boolean, deleteHandler: (item: IShopItem) => void }) {
