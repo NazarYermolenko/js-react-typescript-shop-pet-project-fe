@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import { ShopContextProvider } from './common/context/ShopContext';
+import { UserContextProvider } from './common/context/user_context/UserContext';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -12,7 +13,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <ShopContextProvider>
-        <App />
+        <UserContextProvider>
+          <App />
+        </UserContextProvider>
       </ShopContextProvider>
     </BrowserRouter>
   </React.StrictMode>

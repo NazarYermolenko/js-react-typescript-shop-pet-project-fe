@@ -7,6 +7,7 @@ interface IShopContext {
 }
 
 const defaultValues = [
+    { id: 0, name: "Simple T-short", count: 4, description: "Simple T-short Eight", priceUSD: 10 },
     { id: 1, name: "Simple T-short", count: 4, description: "Simple T-short One", priceUSD: 10 },
     { id: 2, name: "Simple T-short", count: 4, description: "Simple T-short Two", priceUSD: 20 },
     { id: 3, name: "Simple T-short", count: 4, description: "Simple T-short Three", priceUSD: 30 },
@@ -16,8 +17,7 @@ const defaultValues = [
     { id: 7, name: "Simple T-short", count: 4, description: "Simple T-short Eight", priceUSD: 10 },
     { id: 8, name: "Simple T-short", count: 4, description: "Simple T-short Eight", priceUSD: 10 },
     { id: 9, name: "Simple T-short", count: 4, description: "Simple T-short Eight", priceUSD: 10 },
-    { id: 10, name: "Simple T-short", count: 4, description: "Simple T-short Eight", priceUSD: 10 },
-    { id: 11, name: "Simple T-short", count: 4, description: "Simple T-short Eight", priceUSD: 10 },
+    { id: 10, name: "Simple T-short", count: 4, description: "Simple T-short Eight", priceUSD: 10 }
 ]
 
 export const ShopContext = createContext<IShopContext>(null)

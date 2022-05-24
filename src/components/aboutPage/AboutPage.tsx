@@ -4,7 +4,7 @@ import { Header } from "../common_components/header/Header";
 export function AboutPage() {
     return <div className="page">
         <Header />
-        <div className="container about_container">
+        <div className="container justify_center_container">
                 <p>
                     Info page about author.
                 </p>

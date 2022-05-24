@@ -5,9 +5,7 @@
     padding: 1em;
 }
 
-.about_container,
-.footer_container,
-.login_container {
+.justify_center_container {
     justify-content: center;
 }
 

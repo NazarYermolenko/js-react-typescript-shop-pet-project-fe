@@ -1,16 +1,9 @@
-import { Link } from "react-router-dom"
+import { Logo } from "./Logo"
+import { NavBar } from "./NavBar"
 
 export function Header() {
-    return <header className="container header_container" id="header">
-        <div className="logo">
-            <Link to="/">
-                <h1>LOGO</h1>
-            </Link>
-        </div>
-        <ul className="menu">
-            <li className="menu_item"><Link to="/sign_in">Sign In/Register</Link></li>
-            <li className="menu_item">Cart</li>
-            <li className="menu_item"><Link to="/about">About</Link></li>
-        </ul>
+    return <header className="container justify_center_container" id="header">
+        <Logo />
+        <NavBar />
     </header>
 }
