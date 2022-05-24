@@ -6,7 +6,8 @@
 }
 
 .about_container,
-.footer_container {
+.footer_container,
+.login_container {
     justify-content: center;
 }
 
@@ -32,11 +33,10 @@
 .shop_section {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 .shop_item {
+    flex-grow: 0.35;
     margin: 10px;
     padding: 10px;
     border: solid 1px;
@@ -46,7 +46,7 @@
 .login_form {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 400px;
 }
 
 .title {

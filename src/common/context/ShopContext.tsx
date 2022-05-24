@@ -14,6 +14,10 @@ const defaultValues = [
     { id: 5, name: "Simple T-short", count: 4, description: "Simple T-short Six", priceUSD: 30 },
     { id: 6, name: "Simple T-short", count: 4, description: "Simple T-short Seven", priceUSD: 20 },
     { id: 7, name: "Simple T-short", count: 4, description: "Simple T-short Eight", priceUSD: 10 },
+    { id: 8, name: "Simple T-short", count: 4, description: "Simple T-short Eight", priceUSD: 10 },
+    { id: 9, name: "Simple T-short", count: 4, description: "Simple T-short Eight", priceUSD: 10 },
+    { id: 10, name: "Simple T-short", count: 4, description: "Simple T-short Eight", priceUSD: 10 },
+    { id: 11, name: "Simple T-short", count: 4, description: "Simple T-short Eight", priceUSD: 10 },
 ]
 
 export const ShopContext = createContext<IShopContext>(null)

@@ -1,7 +1,7 @@
 import { Button } from "../../../common_components/button/Button";
 
 export function LoginForm() {
-    return <div className="container">
+    return <div className="container login_container">
         <div className="login_form">
             <div className="title">
                 <h2>Hello, please enter your credentials:</h2>
