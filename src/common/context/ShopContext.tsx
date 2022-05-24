@@ -24,7 +24,7 @@ export function ShopContextProvider(props: { children }) {
     function deleteItem(itemToDelete: IShopItem) {
         setShopItems(() => {
             return shopItems.filter(item => {
-                return itemToDelete.id != item.id
+                return itemToDelete.id !== item.id
             })
         })
     }
