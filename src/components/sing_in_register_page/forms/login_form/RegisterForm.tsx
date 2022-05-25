@@ -1,33 +1,41 @@
 import { Button } from "../../../common_components/button/Button";
+import { Input } from "../../../common_components/input/Input";
 
 export function RegisterForm(props: { switchHandler }) {
+    
+
     return <div className="container justify_center_container">
         <div className="login_form">
             <div className="title">
                 <h2>Registration Form:</h2>
             </div>
             <div className="form_section">
-                <div className="login_input_container">
-                    <label htmlFor="email">Email:</label>
-                    <input type={"email"} id={"email"}></input>
-                </div>
-                <div className="login_input_container">
-                    <label htmlFor="password">Password: </label>
-                    <input type={"password"} id={"password"}></input>
-                </div>
-                <div className="login_input_container">
-                    <label htmlFor="confirm_password">Confirm Password: </label>
-                    <input type={"password"} id={"confirm_password"}></input>
-                </div>
-                <div className="login_input_container">
-                    <label htmlFor="first_name">First Name: </label>
-                    <input type={"text"} id={"first_name"}></input>
-                </div>
-                <div className="login_input_container">
-                    <label htmlFor="last_name">Last Name: </label>
-                    <input type={"password"} id={"last_name"}></input>
-                </div>
-                <div className="login_input_container">
+                <Input
+                    label="Email:"
+                    id="email"
+                    type="email"
+                />
+                <Input
+                    label="Password:"
+                    type="password"
+                    id="password"
+                />
+                <Input
+                    label="Confirm Password:"
+                    type="password"
+                    id="confirm_password"
+                />
+                <Input
+                    label="First Name:"
+                    type="text"
+                    id="first_name"
+                />
+                <Input
+                    label="Last Name:"
+                    type="text"
+                    id="last_name"
+                />
+                <div className="input_container">
                     <label htmlFor="role">Role: </label>
                     <select id={"role"}>
                         <option>

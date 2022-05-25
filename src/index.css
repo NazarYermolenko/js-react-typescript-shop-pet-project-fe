@@ -61,7 +61,7 @@
     margin: auto;
 }
 
-.login_input_container {
+.input_container {
     padding: 5px;
     display: flex;
     justify-content: space-between;

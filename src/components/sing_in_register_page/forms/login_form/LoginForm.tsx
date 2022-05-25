@@ -1,6 +1,7 @@
 import { ChangeEvent, useState } from "react";
 import { ILoginUserInterface } from "../../../../common/context/user_context/interfaces/ILoginUserInterface";
 import { Button } from "../../../common_components/button/Button";
+import { Input } from "../../../common_components/input/Input";
 
 export function LoginForm(props: { switchHandler: () => void, loginHandler }) {
     const [userToLogin, setUserToLogin] = useState<ILoginUserInterface>()
@@ -19,14 +20,18 @@ export function LoginForm(props: { switchHandler: () => void, loginHandler }) {
                 <h2>Hello, please enter your credentials:</h2>
             </div>
             <div className="form_section">
-                <div className="login_input_container">
-                    <label htmlFor="email">Email:</label>
-                    <input onChange={handleEmailChange} type={"email"} id={"email"}></input>
-                </div>
-                <div className="login_input_container">
-                    <label htmlFor="password">Password: </label>
-                    <input onChange={handlePasswordChange} type={"password"} id={"password"}></input>
-                </div>
+                <Input
+                    label="Email:"
+                    id="email"
+                    type="email"
+                    onChange={handleEmailChange}
+                />
+                <Input
+                    label="Password:"
+                    type="password"
+                    id="password"
+                    onChange={handlePasswordChange}
+                />
             </div>
 
             <div className="button_section">
