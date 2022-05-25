@@ -9,12 +9,13 @@ import { Select } from "../../../common_components/select/Select";
 export function RegisterForm(props: { switchHandler }) {
     const userContext = useContext(UserContext)
     const options = {
+        "": "",
         administrator: Roles.ADMIN,
         user: Roles.USER
     }
     const [user, setUser] = useState<IRegisterUserInterface>()
     const [error, setError] = useState<string>()
-    
+
     function onEmailChange(e) {
         setUser({ ...user, email: e.target.value })
     }
@@ -28,7 +29,7 @@ export function RegisterForm(props: { switchHandler }) {
     }
 
     function onConfirmPasswordChange(e) {
-        if (user.password != e.target.value && e.target.value.length < 5) {
+        if (user.password != e.target.value || e.target.value.length < 5) {
             setError("Confirm password is not fit to password")
         } else {
             setError(undefined)
@@ -71,7 +72,9 @@ export function RegisterForm(props: { switchHandler }) {
                     onChange={onLastNameChange}
                 >Last Name:</Input>
 
-                <Select options={options} id="role"
+                <Select
+                    options={options}
+                    id="role"
                 >Role:</Select>
                 <div className="justify_center_container">
                     {error && <h2>{error}</h2>}

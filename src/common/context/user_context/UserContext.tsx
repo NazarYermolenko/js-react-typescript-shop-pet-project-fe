@@ -50,6 +50,7 @@ export function UserContextProvider(props: { children }) {
             return undefined
         } else {
             setUsers([...users, user])
+            return user
         }
     }
 
