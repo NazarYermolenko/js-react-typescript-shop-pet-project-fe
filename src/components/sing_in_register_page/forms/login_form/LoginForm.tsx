@@ -1,10 +1,12 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useContext, useEffect, useState } from "react";
 import { ILoginUserInterface } from "../../../../common/context/user_context/interfaces/ILoginUserInterface";
+import { UserContext } from "../../../../common/context/user_context/UserContext";
 import { Button } from "../../../common_components/button/Button";
 import { Input } from "../../../common_components/input/Input";
 
-export function LoginForm(props: { switchHandler: () => void, loginHandler }) {
+export function LoginForm(props: { switchHandler: () => void }) {
     const [userToLogin, setUserToLogin] = useState<ILoginUserInterface>()
+    const userContext = useContext(UserContext)
 
     function handleEmailChange(e: ChangeEvent<HTMLInputElement>) {
         setUserToLogin({ ...userToLogin, email: e.target.value })
@@ -21,21 +23,19 @@ export function LoginForm(props: { switchHandler: () => void, loginHandler }) {
             </div>
             <div className="form_section">
                 <Input
-                    label="Email:"
                     id="email"
                     type="email"
                     onChange={handleEmailChange}
-                />
+                >Email:</Input>
                 <Input
-                    label="Password:"
                     type="password"
                     id="password"
                     onChange={handlePasswordChange}
-                />
+                >Password:</Input>
             </div>
 
             <div className="button_section">
-                <Button onClick={props.loginHandler.bind(this, userToLogin)}>
+                <Button onClick={() => userContext.loginUser(userToLogin)}>
                     Login
                 </Button>
                 <Button onClick={props.switchHandler}>

@@ -10,7 +10,6 @@ interface IUserContext {
     registerUser: (user: IRegisterUserInterface) => IRegisterUserInterface
 }
 
-
 export const UserContext = createContext<IUserContext>(null)
 
 export function UserContextProvider(props: { children }) {
@@ -23,9 +22,15 @@ export function UserContextProvider(props: { children }) {
                 user.password === userToLogin.password
         })
         if (user) {
+            user.lastLogin = new Date()
             setLoggedUser({ ...user })
+            setUsers([...users.map((existsUser) => {
+                return users.find(u => u.email === existsUser.email) || user
+            })])
+            return user
+        } else {
+            return undefined
         }
-        return user
     }
 
     function registerUser(userToRegister: IRegisterUserInterface) {
@@ -38,8 +43,14 @@ export function UserContextProvider(props: { children }) {
             .setLastLogin(new Date())
             .build()
 
-        setUsers([...users, user])
-        return user
+        const isUserExists = users.find((existUser) => {
+            return existUser.email === user.email
+        })
+        if (isUserExists) {
+            return undefined
+        } else {
+            setUsers([...users, user])
+        }
     }
 
 

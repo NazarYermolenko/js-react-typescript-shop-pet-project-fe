@@ -18,11 +18,9 @@ export function SignInRegisterPage() {
         {doDisplayLogin ?
             <LoginForm
                 switchHandler={displayLoginSwitcher}
-                loginHandler={userContext.loginUser}
             /> :
             <RegisterForm
                 switchHandler={displayLoginSwitcher}
-                // registerHandler={userContext.registerUser}
             />
         }
         <Footer />
